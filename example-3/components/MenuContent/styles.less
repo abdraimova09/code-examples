@@ -1,0 +1,40 @@
+@import '~antd/es/style/themes/default';
+
+.page {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  padding: 10px;
+  background-color: @white;
+}
+.page-slider-exit.page {
+  z-index: 1;
+}
+//new page entering, show it on top
+.page-slider-enter.page {
+  z-index: 10;
+}
+//LEFT transition transform 100% to the right
+.page-slider-enter.left.page {
+  transform: translate3d(100%, 0, 0);
+}
+//RIGHT transition transform -100% to the left
+.page-slider-enter.right.page {
+  transform: translate3d(-100%, 0, 0);
+}
+//old exit left direction
+.page-slider-exit.left.page {
+  transform: translate3d(-100%, 0, 0);
+}
+//old exit right direction
+.page-slider-exit.right.page {
+  transform: translate3d(100%, 0, 0);
+}
+//Enter is active (Page has finished transitioning) make it settle down
+.page-slider-enter.page-slider-enter-active.page {
+  transform: translate3d(0, 0, 0);
+  //Apply all transitions
+  transition: all 800ms ease-in-out;
+}

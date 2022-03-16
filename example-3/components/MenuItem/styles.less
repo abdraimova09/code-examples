@@ -1,0 +1,33 @@
+@import '~antd/es/style/themes/default';
+
+.my-garage-menu-item-wrapper {
+  min-height: 64px;
+  padding: 12px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 999;
+  small {
+    color: @text-color-secondary-dark;
+  }
+  &:hover {
+    background-color: fade(@btn-default-bg, 67%);
+  }
+  &.is-active {
+    background-color: @btn-default-bg;
+  }
+  &.is-active,
+  &:hover {
+    color: @white;
+    small {
+      color: @white;
+    }
+    svg path:not(.dontchange) {
+      fill: @white;
+    }
+  }
+  .svg-container {
+    padding-right: 15px;
+    padding-left: 5px;
+    width: 60px;
+  }
+}

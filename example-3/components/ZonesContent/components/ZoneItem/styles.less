@@ -1,0 +1,31 @@
+@import '~antd/es/style/themes/default';
+
+.my-garage-zone-item-wrapper {
+  border: 1px solid @text-color-secondary-dark;
+  border-radius: 4px;
+  padding: 13px 0 13px 15px;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    background-color: @btn-default-bg;
+    color: @white;
+  }
+}
+
+.my-garage-zone-item-name {
+  font-weight: bold;
+}
+
+.my-garage-zone-item-toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+}
